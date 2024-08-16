@@ -63,18 +63,45 @@ arr_val = [1000, 1000, 100]
 arr_unit = ["g", "kg", "m"]
 
 
-def solution(arr_val, arr_unit) :
-    print(arr_val[1])
+def solution(arr_val, arr_unit) : 
+    if arr_unit[0] == "kg":
+        first_mass == arr_val[0]
+    elif arr_unit[0] == "g":
+        first_mass = arr_val[0] / 1000
+    elif arr_unit[0] == "mg":
+        first_mass = arr_val[0] / 1000000
+    elif arr_unit[0] == "μg":
+        first_mass = arr_val[0] / 1000000000
+    elif arr_unit[0] == "lb":
+        first_mass = arr_val[0] / 2.204623
+    
+    if arr_unit[1] == "kg":
+        second_mass = arr_val[1]
+    elif arr_unit[1] == "g":
+        second_mass = arr_val[1] / 1000
+    elif arr_unit[1] == "mg":
+        second_mass = arr_val[1] / 1000000
+    elif arr_unit[1] == "μg":
+        second_mass = arr_val[1] / 1000000000
+    elif arr_unit[1] == "lb":
+        second_mass = arr_val[1] / 2.204623
+    
+    if arr_unit[2] == "m":
+        distance = arr_val[2]
+    elif arr_unit[2] == "cm":
+        distance = arr_val[2] / 100
+    elif arr_unit[2] == "mm":
+        distance = arr_val[2] / 1000
+    elif arr_unit[2] == "μm":
+        distance = arr_val[2] / 1000000
+    elif arr_unit[2] == "ft":
+        distance = arr_val[2] / 3.28084
+
+
+    f = (6.67e-11) * first_mass * second_mass / (distance**2)
+    print(f)  
 
 solution(arr_val, arr_unit)
-
-
-
-
-
-
-
-
 
 
 
