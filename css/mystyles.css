@@ -1,4 +1,11 @@
-div {
-    border-radius: 50px;
-    background-color: red;
+tr:nth-child(odd) {
+    background-color: lightblue;
+}
+
+tr:nth-child(even) {
+    background-color: lightgreen;
+}
+
+th {
+    background-color: lightpink;
 }
